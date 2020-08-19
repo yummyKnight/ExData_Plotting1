@@ -1,5 +1,0 @@
-library("lubridate")
-setClass("Mytime")
-setAs("character","myTime", function(from) strptime(from, format = "%H:%M:%S") )
-col_classes = c("Date", "myTime",rep("numeric", 7))
-dataset <- read.csv("household_power_consumption.txt", sep = ";", colClasses = col_classes, na.strings = "?")
